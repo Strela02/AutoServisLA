@@ -1,0 +1,219 @@
+:root {
+    --primary:#c22026;
+    --black:#00000000;
+    --white:white;
+    --gray:rgb(242,242,242);
+    --fontSize:16px;
+    --transition: .3s linear;
+}
+/***********
+basic style
+***********/
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--fontSize);
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: serif;
+}
+.container {
+    width: 70%;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition:var(--transition);
+}
+h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    padding: 10px 0;
+    text-align: center;
+}
+button {
+    background: var(--primary);
+    padding: 10px 40px;
+    border: none;
+    margin-top: 20px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+button:hover {
+    background: black;
+}
+/***********
+header
+***********/
+ul {
+    list-style: none;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(img/pozadina.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+header ul {
+    display: flex;
+}
+header nav .logo img {
+    width: 40%;
+    
+}
+header nav ul li a {
+    color: black;
+    margin-left: 60px;
+    text-transform: uppercase;
+}
+header nav ul li a:hover {
+    color: var(--primary);
+
+}
+header article {
+    color: var(--white);
+    padding: 200px 0 250px 0;
+    
+}
+header h1 {
+    font-size: 5rem;
+    text-shadow: 0 0 10px var(--primary);
+}
+header p {
+    font-size: 1.3rem;
+    text-shadow: 0 0 5px var(--primary);
+    
+}
+.lead {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/***********
+istorijat
+***********/
+#istorijat {
+    padding: 100px 0;
+}
+section p {
+    font-size: 20px;
+    text-align: center;
+}
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+  
+  .google-map iframe {
+    height: 60%;
+    width: 50%;
+    left: 25%;
+    top: 50px;
+    position: absolute;
+  }
+  
+/***********
+video
+***********/
+#video iframe {
+    width: 100%;
+    height: 500px;
+}
+/***********
+shop
+***********/
+#shop {
+    margin-top: 100px;
+    background: var(--gray);
+    clip-path: polygon(0 15%, 100% 0%, 100% 96%, 0% 100%);
+    padding: 300px 0 100px 0;
+}
+#shop article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#shop div:first-child {
+    flex: 0 0 39%;
+}
+#shop div:last-child {
+    flex: 0 0 59%;
+}
+#shop img {
+    width: 100%;
+}
+#shop hr {
+    margin: 10px 0;
+}
+/***********
+footer
+***********/
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+/***********
+RESPONSIVE
+***********/
+@media (max-width: 767px) {
+    header {
+        clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    }
+    header nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav ul li a {
+        margin: 10px;
+
+    }
+    .container {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+    header article {
+        
+        padding: 70px 0 100px 0;
+    }
+    #istorijat {padding: 50px 0;
+    }
+    #video iframe {
+        height: 250px;
+    }
+    #shop {
+        margin-top: 50px;
+        clip-path: polygon(0 5%, 100% 0%, 100% 96%, 0% 100%);
+        padding: 150px 0 100px 0;}
+    #shop div:first-child
+    #shop div:last-child{
+        flex: 0 0 100%;
+    }
+        
+}
+section h2 {
+    align-items: center;
+}
